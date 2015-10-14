@@ -1,0 +1,9 @@
+{
+  "name": "jessica",
+  "version": "2.0.0",
+  "description": "Jessica is yet another CSS framework",
+  "author": "Nephila",
+  "license": "",
+  "devDependencies": {
+  }
+}
