@@ -2,4 +2,4 @@
 
 ## Compile the example
 
-    babel es6/main.js > js/main.js
+    gulp build

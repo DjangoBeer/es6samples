@@ -75,7 +75,7 @@ function handleES6Scripts(srcPath) {
   transpileES6Modules(browserifyFileEntries);
 }
 
-gulp.task('scripts:es6', function(cb) {
+gulp.task('build', function(cb) {
   handleES6Scripts(config.src);
   cb();
 });
