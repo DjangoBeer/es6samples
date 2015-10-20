@@ -5,5 +5,11 @@
   "author": "Nephila",
   "license": "",
   "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "glob": "^5.0.15",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

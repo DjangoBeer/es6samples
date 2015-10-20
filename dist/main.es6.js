@@ -1,5 +1,55 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
+var _personEs6 = require('./person.es6');
+
+var andrea = new _personEs6.Person('Andrea', 'Stagi');
+var mark = new _personEs6.Person('Mark', 'Iozz');
+var matt = new _personEs6.Person('Matt', 'Lap');
+
+andrea.addFriend(mark);
+andrea.addFriend(mark);
+andrea.showFriends();
+mark.showFriends();
+
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+  for (var _iterator = andrea.pullEar()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    var age = _step.value;
+
+    // truncate the sequence at 15
+    if (age == 15) {
+      break;
+    }
+    console.log(age + '!!');
+  }
+} catch (err) {
+  _didIteratorError = true;
+  _iteratorError = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion && _iterator['return']) {
+      _iterator['return']();
+    }
+  } finally {
+    if (_didIteratorError) {
+      throw _iteratorError;
+    }
+  }
+}
+
+console.log(mark.getIdentityCard());
+
+},{"./person.es6":2}],2:[function(require,module,exports){
 // 1. Classes
 'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -101,43 +151,6 @@ var Person = (function () {
   return Person;
 })();
 
-var andrea = new Person('Andrea', 'Stagi');
-var mark = new Person('Mark', 'Iozz');
-var matt = new Person('Matt', 'Lap');
+exports.Person = Person;
 
-andrea.addFriend(mark);
-andrea.addFriend(mark);
-andrea.showFriends();
-mark.showFriends();
-
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
-
-try {
-  for (var _iterator = andrea.pullEar()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    var age = _step.value;
-
-    // truncate the sequence at 15
-    if (age == 15) {
-      break;
-    }
-    console.log(age + '!!');
-  }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion && _iterator['return']) {
-      _iterator['return']();
-    }
-  } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
-    }
-  }
-}
-
-console.log(mark.getIdentityCard());
-
+},{}]},{},[1]);

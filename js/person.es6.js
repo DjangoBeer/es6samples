@@ -1,5 +1,5 @@
 // 1. Classes
-class Person {
+export class Person {
   // 2. Default parameter
   constructor(firstName, lastName, age=18) {
     this._firstName = firstName;
@@ -54,22 +54,3 @@ class Person {
     );
   }
 }
-
-let andrea = new Person('Andrea', 'Stagi');
-let mark = new Person('Mark', 'Iozz');
-let matt = new Person('Matt', 'Lap');
-
-andrea.addFriend(mark);
-andrea.addFriend(mark);
-andrea.showFriends();
-mark.showFriends();
-
-for (var age of andrea.pullEar()) {
-  // truncate the sequence at 15
-  if (age == 15) {
-    break;
-  }
-  console.log(`${age}!!`);
-}
-
-console.log(mark.getIdentityCard());
