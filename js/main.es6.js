@@ -1,8 +1,8 @@
-import {Person} from './person.es6';
+import {FriendlyGuy} from './friendlyguy.es6';
 
-let andrea = new Person('Andrea', 'Stagi');
-let mark = new Person('Mark', 'Iozz');
-let matt = new Person('Matt', 'Lap');
+let andrea = new FriendlyGuy('Andrea', 'Stagi', 28);
+let mark = new FriendlyGuy('Mark', 'Iozz', 27);
+let matt = new FriendlyGuy('Matt', 'Lap', 29);
 
 andrea.addFriend(mark);
 andrea.addFriend(mark);

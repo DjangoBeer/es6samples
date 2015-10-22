@@ -107,52 +107,7 @@ var FriendlyGuy = (function (_Person) {
 
 exports.FriendlyGuy = FriendlyGuy;
 
-},{"./person.es6":3}],2:[function(require,module,exports){
-'use strict';
-
-var _friendlyguyEs6 = require('./friendlyguy.es6');
-
-var andrea = new _friendlyguyEs6.FriendlyGuy('Andrea', 'Stagi', 28);
-var mark = new _friendlyguyEs6.FriendlyGuy('Mark', 'Iozz', 27);
-var matt = new _friendlyguyEs6.FriendlyGuy('Matt', 'Lap', 29);
-
-andrea.addFriend(mark);
-andrea.addFriend(mark);
-andrea.showFriends();
-mark.showFriends();
-
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
-
-try {
-  for (var _iterator = andrea.pullEar()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    var age = _step.value;
-
-    // truncate the sequence at 15
-    if (age == 15) {
-      break;
-    }
-    console.log(age + '!!');
-  }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion && _iterator['return']) {
-      _iterator['return']();
-    }
-  } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
-    }
-  }
-}
-
-console.log(mark.getIdentityCard());
-
-},{"./friendlyguy.es6":1}],3:[function(require,module,exports){
+},{"./person.es6":2}],2:[function(require,module,exports){
 // 1. Classes
 'use strict';
 
@@ -192,4 +147,4 @@ var Person = (function () {
 
 exports.Person = Person;
 
-},{}]},{},[2]);
+},{}]},{},[1]);
