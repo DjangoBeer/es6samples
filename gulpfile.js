@@ -1,18 +1,3 @@
-/*var gulp = require('gulp');
-var babelify = require('babelify');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-
-gulp.task('build', function () {
-  return browserify({entries: 'es6/main.es6.js', debug: true})
-    .transform(babelify)
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('default', ['build']);*/
-
 var config = {
   src: 'js',
   dest: 'dist'
