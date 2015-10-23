@@ -11,6 +11,7 @@ var plugins = require('gulp-load-plugins')();
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
+var eslint = require('gulp-eslint');
 
 // Takes an array of bundles to run through browserify and babelify
 function transpileES6Modules(browserifyFileEntries) {
@@ -60,7 +61,14 @@ function handleES6Scripts(srcPath) {
   transpileES6Modules(browserifyFileEntries);
 }
 
-gulp.task('build', function(cb) {
+gulp.task('build', ['lint'], function(cb) {
   handleES6Scripts(config.src);
   cb();
+});
+
+gulp.task('lint', function () {
+    return gulp.src(['js/**/*.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
 });
