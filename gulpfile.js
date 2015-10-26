@@ -17,7 +17,7 @@ var eslint = require('gulp-eslint');
 function transpileES6Modules(browserifyFileEntries) {
   browserifyFileEntries.forEach(function(fileEntry) {
     var browserifyBundle = browserify({
-        entries: [fileEntry.srcPath]
+        entries: [fileEntry.srcPath],
       })
       .transform(babelify);
 
