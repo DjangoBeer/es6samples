@@ -1,4 +1,5 @@
 import {Person} from './person.es6';
+import '../node_modules/babel/polyfill'
 
 // 1. Classes
 export class FriendlyGuy extends Person {
